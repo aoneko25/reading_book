@@ -1,0 +1,70 @@
+.main-screen
+  .header-box
+    .header-box__text
+      %p Reading book
+      .header-box__text__list
+        - if user_signed_in?
+          %h2 ログインしています
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+          %h2 
+          = link_to "登録する", records_path
+        - else
+          %h2 ログインしていません
+          = link_to "新規登録", new_user_registration_path
+          = link_to "ログイン", new_user_session_path
+  .left-box
+    %ul.left-box
+      %li.left-box__lists__list
+        マイページ
+      %li.left-box__lists__list
+        気になる本
+      %li.left-box__lists__list
+        読んだ本
+      %li.left-box__lists__list
+        オススメの本
+      %li.left-box__lists__list
+        閲覧履歴
+      %li.left-box__lists__list
+        友達
+
+  .contents-box
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+      
+  
+        
+

@@ -1,0 +1,20 @@
+.login-screen
+  .header-login
+    .login-box
+      .login-main
+        %section.login-container
+          %h2 ログイン
+        .login-text
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .login-text__box
+            .login-text__contents
+              %label Eメール
+              %span 必須
+              = f.email_field :email, autofocus: true, autocomplete: "email"
+            .login-text__contents
+              .form
+              %label パスワード(6文字)
+              %span 必須
+              = f.password_field :password, autocomplete: "new-password"
+            = f.submit "ログイン", class: 'registration'
+      .footer-login-box 
