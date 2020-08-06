@@ -10,14 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_23_085721) do
+ActiveRecord::Schema.define(version: 2020_07_08_092616) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.text "text"
-    t.text "image"
+    t.bigint "user_id"
+    t.integer "item_id"
+    t.string "image"
+    t.string "visibility"
+    t.string "genre"
+    t.string "title", null: false
+    t.string "subtitle"
+    t.string "language"
+    t.string "author"
+    t.string "the_publisher"
+    t.date "issue_date"
+    t.integer "page_number"
+    t.string "format"
+    t.text "overview"
+    t.string "chapter"
+    t.string "volume"
+    t.string "episode"
+    t.date "read_day"
+    t.text "impression"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["user_id"], name: "index_books_on_user_id"
+  end
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nickname", null: false
+    t.integer "age", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
