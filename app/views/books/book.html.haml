@@ -1,0 +1,38 @@
+.contents-box
+    .content-box
+      .content
+        .content__text
+        - @books.each do |book|
+          %p= book.title
+        .content__text
+          = link_to "編集する", edit_books_path 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 
+    .content-box
+      .content
+        .content__text
+          本タイトル
+        .content__text
+          詳細 

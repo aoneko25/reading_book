@@ -2,8 +2,7 @@ class CreateBooks < ActiveRecord::Migration[5.2]
   def change
     create_table :books do |t|
       t.references :user             , optional: true
-      t.integer     :item_id         
-      t.string      :image           
+      t.integer     :item_id                    
       t.string      :visibility      
       t.string      :genre           
       t.string      :title           , null: false
