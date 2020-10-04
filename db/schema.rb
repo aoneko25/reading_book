@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_08_092616) do
+ActiveRecord::Schema.define(version: 2020_08_12_032404) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.integer "item_id"
-    t.string "image"
     t.string "visibility"
     t.string "genre"
     t.string "title", null: false
@@ -37,6 +36,31 @@ ActiveRecord::Schema.define(version: 2020_07_08_092616) do
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "src", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_images_on_user_id"
+  end
+
+  create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "self_introduction"
+    t.string "dream"
+    t.string "terget"
+    t.date "scheduled_date"
+    t.string "plan"
+    t.string "favorite_book"
+    t.string "hobby"
+    t.string "forte"
+    t.string "weak_point"
+    t.string "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.integer "age", null: false
@@ -51,4 +75,5 @@ ActiveRecord::Schema.define(version: 2020_07_08_092616) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "images", "users"
 end

@@ -2,8 +2,19 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+//トップページ、登録関連
 @import "books/_home.scss";
+@import "books/_record.scss";
+@import "books/_create.scss";
+
+//マイページ登録関連
 @import "registraions/_new.scss";
 @import "sessions/_new.scss";
-@import "records/_index.scss";
-@import "records/_create.scss";
+@import "mypage/_mypage.scss";
+
+//プロフィール登録関連
+@import "profile/_index.scss";
+@import "profile/_create.scss";
+
+//本の検索
+@import "seach";
