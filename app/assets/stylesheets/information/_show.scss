@@ -1,0 +1,126 @@
+.data-header-box {
+  padding: 15px 10px 15px 5px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #eee;
+  background-color: #1E90FF;
+  margin: 60px auto;
+  width: 980px;
+}
+
+.data-header-box__text {
+  margin-left: 70px;
+  display: flex;
+  a {
+    color: #668ad8; 
+    border: double 5px #668ad8;/*二重線 太さ 色*/
+    background: #f1f8ff; 
+    padding: 0.5em 0.5em 0.5em 2em;
+    line-height: 1.5;
+    padding: 0.5em 0;
+    text-decoration: none;
+  }
+  p {
+    font-size: 25px;
+    color: #fff;
+    background: #A4C6FF;
+  }
+}
+
+.bookshelf-image {
+  float: right;
+  
+  img {
+    position: absolute;
+    bottom: 407px;
+    left: 610px;
+    
+  }
+}
+
+.data-header-box2 {
+  padding: 15px 10px 15px 5px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #eee;
+  background: #A4C6FF;
+  margin: 60px auto;
+  width: 980px;
+}
+
+.data-header-box__text2 {
+  margin-left: 70px;
+  display: flex;
+  background: #FFF;
+  a {
+    color: #668ad8; 
+    border: double 5px #668ad8;/*二重線 太さ 色*/
+    background: #f1f8ff; 
+    padding: 0.5em 0.5em 0.5em 2em;
+    line-height: 1.5;
+    padding: 0.5em 0;
+    text-decoration: none;
+  }
+  p {
+    font-size: 20px;
+    color: #1E90FF;
+  }
+}
+
+.name-text {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 4px;
+  font-size: 20px;
+  color: #1E90FF;
+}
+
+.data-box2.data-box2 {
+  background-color: #1E90FF;
+  width: 980px;
+  margin: 0 auto;
+  .bg{
+    width:100%;
+    height:100vh;
+    background: radial-gradient(#87cefa 25%, transparent 0),
+                radial-gradient(#87cefa 25%, transparent 0);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px
+  }
+  .data-box2__inner.clearfix {
+    width: 980px;
+    border-radius: 5px;
+    padding-left: 70px;
+    padding-top:  50px;
+    height:600px;
+    .data-box2__inner--left.data-box2__header{
+      float: left;
+      width: 21%;
+      
+    }
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+
+  .homw-box2__inner--right {
+    float: left;
+      width: 80%;
+  }
+  }
+
+
+.data-footer {
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: 250px;
+  padding: 40px 0;
+  text-align: center;
+  background: #A4C6FF;
+  width: 980px;
+  margin: 0 auto;
+  margin: 60px auto 0;
+}

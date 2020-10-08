@@ -3,7 +3,7 @@
     .mypage-box
       .mypage
         %section.mypage-container
-          %h2 マイページ編集画面
+          %h2 登録内容変更
         .mypage-text
         = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
           .mypage-text__box

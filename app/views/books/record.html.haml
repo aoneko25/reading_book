@@ -1,74 +1,76 @@
 = form_for(@books) do |f|
   #record-box.record-box
-    .record-box__inner.clearfix
-      .record-box__inner--left.record-box__header
-        %h2 登録内容
-        
-      .record-box__inner--right.user-form
-        
-        .field
-          .field-label
-            
-          .field-input
-            = f.text_field :title, placeholder: 'タイトル'
-        .field
-          .field-label
-            
-          .field-input
-            = f.text_field :subtitle, placeholder: 'サブタイトル'
-        .actions
+    .bg
+      .record-box__inner.clearfix
+        .record-box__inner--left.record-box__header
+          %h2 登録内容
+          
+        .record-box__inner--right.user-form
+          
+          .field
+            .field-label
+              
+            .field-input
+              = f.text_field :title, placeholder: 'タイトル'
+          .field
+            .field-label
+              
+            .field-input
+              = f.text_field :subtitle, placeholder: 'サブタイトル'
+          .actions
         
   #record-box2.record-box2
-    .record-box2__inner.clearfix
-      .record-box2__inner--left.record-box2__header
-        .field
-          %h2 詳細
-          .field-label
-            %label 
-            %span ジャンル
-          = f.text_field :genre, placeholder: 'ジャンル'
-          .field-label
-            %label 
-            %span 著者
-          = f.text_field :author, placeholder: '著者'
-          .field-label
-            %label 
-            %span 出版社
-          = f.text_field :the_publisher, placeholder: '出版社'
-          .field-label
-            %label 
-            %span 発行年月日
-          = f.date_field :issue_date, class: 'issue_date'
-          .field-label
-            %label 
-            %span 言語
-          = f.text_field :language, placeholder: '言語'
-          .field-label
-            %label 
-            %span ページ数
-          = f.text_field :page_number, placeholder: 'ページ数'
-          .field-label
-            %label 
-            %span 注目度
-          = f.text_field :impression, placeholder: '注目度'
-          .field-label
-            %label 
-            %span 読書日
-          = f.date_field :read_day, class: 'read_day'
-        
-      .record-box2__inner--right.user-form
-        .field
-        
-          .field-label
-            
-          .field-input1
-            = f.text_area :overview,class: "statusform",type:"text",placeholder:"概要",value:""
-          .field-label
-            
-          .field-input2
-            = f.text_area :impression,class: "statusform",type:"text",placeholder:"感想",value:""
-        
-  .footer
-    .action
-      = f.submit "登録する", class: 'btn'
+    .bg
+      .record-box2__inner.clearfix
+        .record-box2__inner--left.record-box2__header
+          .field
+            %h2 詳細
+            .field-label
+              %label 
+              %span ジャンル
+            = f.text_field :genre, placeholder: 'ジャンル'
+            .field-label
+              %label 
+              %span 著者
+            = f.text_field :author, placeholder: '著者'
+            .field-label
+              %label 
+              %span 出版社
+            = f.text_field :the_publisher, placeholder: '出版社'
+            .field-label
+              %label 
+              %span 発行年月日
+            = f.date_field :issue_date, class: 'issue_date'
+            .field-label
+              %label 
+              %span 言語
+            = f.text_field :language, placeholder: '言語'
+            .field-label
+              %label 
+              %span ページ数
+            = f.text_field :page_number, placeholder: 'ページ数'
+            .field-label
+              %label 
+              %span 注目度
+            = f.text_field :impression, placeholder: '注目度'
+            .field-label
+              %label 
+              %span 読書日
+            = f.date_field :read_day, class: 'read_day'
           
+        .record-box2__inner--right.user-form
+          .field
+          
+            .field-label
+              
+            .field-input1
+              = f.text_area :overview,class: "statusform",type:"text",placeholder:"概要",value:""
+            .field-label
+              
+            .field-input2
+              = f.text_area :impression,class: "statusform",type:"text",placeholder:"感想",value:""
+          
+    .footer
+      .action
+        = f.submit "登録する", class: 'btn'
+            

@@ -1,47 +1,52 @@
-.home-main-box
-  .header-box
-    .header-box__text
-      %h2 Read a book
-      
-    .header-box__text__list
-      - if user_signed_in?
-        %h2 ログインしています
-        = link_to "ログアウト", destroy_user_session_path, method: :delete
-        = link_to "登録する", record_books_path
-      - else
-        %h2 ログインしていません
-        = link_to "新規登録", new_user_registration_path
-        = link_to "ログイン", new_user_session_path
-    .books-image
-      =image_tag "books.jpg",size: '400x200',alt:"fmarket"
+.home-header-box
+  .bg
+    .header-box
+      .header-box__text
+        %h2 Read a book
+        
+      .header-box__text__list
+        - if user_signed_in?
+          %h2 ログインしています
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+          = link_to "本を登録する", record_books_path
+        - else
+          %h2 ログインしていません
+          = link_to "新規登録", new_user_registration_path
+          = link_to "ログイン", new_user_session_path
+      .books-image
+        =image_tag "books.jpg",size: '400x200',alt:"fmarket"
 
 - if user_signed_in?
   .header-box2
     .header-box__text2
-      = current_user.nickname
-      = link_to "マイページ編集", edit_user_registration_path
+      %p ログインしているユーザー
+      .home-name-text
+        = current_user.nickname
   #home-box2.home-box2
-    .home-box2__inner.clearfix
-      .home-box2__inner--left.home-box2__header
-        .field
-          %li.left-box__lists__list
-            = link_to "プロフィール", profiles_path
-          %li.left-box__lists__list
-            = link_to "本の検索", seach_books_path
-          %li.left-box__lists__list
-            = link_to "読んだ本", read_books_path
-      .home-box2__inner--right.user-form
-        .contents-box
-          .content-box
-            .content
+    .bg
+      .home-box2__inner.clearfix
+        .home-box2__inner--left.home-box2__header
+          .field
+            %li.left-box__lists__list
+              = link_to "プロフィール", profiles_path
+            %li.left-box__lists__list
+              = link_to "本の検索", seach_books_path
+            %li.left-box__lists__list
+              %a{:href => "/information/#{current_user.id}"} マイページ
+        .home-box2__inner--right.user-form
+          .contents-box
+            .content-box
+              .content
+                .content__text
+                - @books.each do |book|
+                  = simple_format(book.title)
+                  %p= book.title
+        
               .content__text
-              
-                本タイトル
-                
-              .content__text
-                詳細 
+                %p 詳細 
         
   .home-footer
     .footer-box
+      
       
           

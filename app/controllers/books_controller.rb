@@ -1,7 +1,10 @@
 class BooksController < ApplicationController
 
   def home
-    @books = Book.all.order("created_at DESC")
+    @books = Book.order("created_at DESC")
+  end
+  
+  def show
   end
 
   def record
@@ -27,17 +30,17 @@ class BooksController < ApplicationController
       read_day: books_params[:read_day],
       impression: books_params[:impression],
       user_id: current_user.id)
+      
   end
 end
 
   def seach
   end
 
+  
+
   def edit
     @books = Book.find(params[:id])
-  end
-
-  def plan
   end
   
   def update

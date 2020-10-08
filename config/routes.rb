@@ -10,8 +10,13 @@ Rails.application.routes.draw do
       post 'create' #登録完了
       get 'seach'  #本の検索
       get 'edit'  #本のデータ編集
-      get 'plan'  #読む予定の本
-      get 'read'  #読んだ本
+      get 'data'  #登録した本
+    end
+  end
+
+  resources :information do
+    collection do
+      get 'show' #マイページ
     end
   end
   
@@ -22,8 +27,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :books, only: [:index, :new, :create, :show, :edit, :seach, :plan, :read]
+  resources :books, only: [:index, :new, :create, :data, :edit, :seach]
   resources :users, only: [:index, :edit, :update]
+  resources :information, only: [:index, :edit, :update]
   resources :profiles, only: [:index, :new, :create, :show]
   end
 

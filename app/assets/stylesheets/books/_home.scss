@@ -3,10 +3,17 @@
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
 }
 
-.home-main-box {
+.home-header-box {
   background-color: #1E90FF;
     width: 980px;
     margin: 0 auto;
+    .bg{
+      width:100%;
+      background: radial-gradient(#87cefa 25%, transparent 0),
+                  radial-gradient(#87cefa 25%, transparent 0);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px
+    }
 }
 
 .header-box {
@@ -15,12 +22,20 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 60px
-  
+   
 }
 
 .header-box__text {
+  margin-bottom: 10px;
+    letter-spacing: 3px;
+    font-size: 40px;
+    font-weight: 200;
+    width: 300px;
+    text-align: center;
   h2 {
     font-size: 40px;
+    color: #fff;
+    background: #A4C6FF;
   }
 }
 
@@ -62,8 +77,8 @@ p {
   
   img {
     position: absolute;
-    bottom: 400px;
-    left: 600px;
+    bottom: 407px;
+    left: 610px;
     
   }
 }
@@ -79,8 +94,15 @@ p {
 }
 
 .header-box__text2 {
-  padding-left: 70px;
   display: flex;
+  background: #FFF;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 4px;
+  font-size: 20px;
+  color: #1E90FF;
+  font-size: 20px;
+  margin-left: 60px;
   a {
     color: #668ad8; 
     border: double 5px #668ad8;/*二重線 太さ 色*/
@@ -89,6 +111,13 @@ p {
     line-height: 1.5;
     padding: 0.5em 0;
     text-decoration: none;
+  }
+  p {
+    font-size: 20px;
+    padding-right: 30px;
+  }
+  .home-name-text {
+    margin-top: 4px;
   }
 }
 
@@ -135,7 +164,7 @@ p {
   margin-left: 10px;/*はみ出ないように調整*/
   margin-right: 10px;/*はみ出ないように調整*/
   padding: 0.5em 0.5em 0.5em 2em;
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 .content-box {
@@ -172,11 +201,20 @@ p {
     background-color: #1E90FF;
     width: 980px;
     margin: 0 auto;
+    .bg{
+      width:100%;
+      height:100vh;
+      background: radial-gradient(#87cefa 25%, transparent 0),
+                  radial-gradient(#87cefa 25%, transparent 0);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px
+    }
     .home-box2__inner {
       width: 980px;
-      border: 1px solid #ddd;
       border-radius: 5px;
-      padding: 60px;
+      padding-left: 70px;
+      padding-top:  50px;
+      height:600px;
       .home-box2__inner--left{
         float: left;
         width: 20%;
@@ -189,7 +227,7 @@ p {
       }
     }
   
-    .homw-box2__inner--right {
+    .home-box2__inner--right {
       float: left;
         width: 80%;
     }
@@ -208,6 +246,3 @@ p {
   margin: 60px auto 0;
 }
 
-.footer-box {
-
-}
