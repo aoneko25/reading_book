@@ -1,0 +1,24 @@
+- if @books
+  .contents-box{data: {book: {id: book.id}}}
+    .content-box
+      .content
+      
+        .content__text
+          %p タイトル
+          %h2= book.title
+        .content__text__informations
+          .user
+            %span 投稿者
+          .user-name
+            = book.user.nickname
+          
+          .data
+            = link_to "詳細", "/books/#{book.id}/details", method: :get
+          .edit
+            - if user_signed_in? && current_user.id == book.user_id
+              = link_to '編集', "/books/#{book.id}/edit", method: :patch
+          .destroy
+            - if user_signed_in? && current_user.id == book.user_id
+              = link_to '削除', "/books/#{book.id}/destroy", method: :delete
+          
+        

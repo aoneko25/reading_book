@@ -20,14 +20,9 @@
             = link_to "プロフィール登録", profiles_path
           
       .data-box2__inner--right.user-form
-        .contents-box
-          .content-box
-            .content
-              .content__text
-              
-      
-            .content__text
-              %p 詳細 
+        = render @books
+                    
         
 .data-footer
   .data-footer-box
+  = paginate(@books)

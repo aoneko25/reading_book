@@ -1,4 +1,4 @@
-= form_tag("/books/#{@book.id}", method: :patch ) do
+= form_for(@books) do |f|
   #record-box.record-box
     .bg
       .record-box__inner.clearfix

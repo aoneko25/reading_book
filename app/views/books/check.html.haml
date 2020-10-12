@@ -1,0 +1,17 @@
+.destroy-screen
+  .destroy-header
+    .destroy-header-box
+    %h1.destroy-header-box__icon
+
+  .destroy-box
+    .destroy-main
+      %section.destroy-main__header
+        %h2 削除確認画面
+  .destroy-box
+    .destroy-main
+      %section.destroy-main__header
+        %h2 本当に削除してもよろしいですか？
+      .destroy-main__box
+        .cdestroy-main__form
+          = link_to "削除する", information_index_path, class: 'btn destroy'
+  .footer-destroy
