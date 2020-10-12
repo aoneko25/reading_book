@@ -1,0 +1,18 @@
+.destroy-screen
+  .destroy-header
+    .destroy-header-box
+    %h1.destroy-header-box__icon
+
+  .destroy-box
+    .destroy-main
+      %section.destroy-main__header
+        %h2 削除確認画面
+  .destroy-box
+    .destroy-main
+      %section.destroy-main__header
+        %h2 削除しました
+      .destroy-main__box
+        .cdestroy-main__form
+          
+        = link_to '削除', "/books/#{book.id}/destroy", method: :delete
+  .footer-destroy

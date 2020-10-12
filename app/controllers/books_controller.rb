@@ -1,10 +1,12 @@
 class BooksController < ApplicationController
 
   def home
-    @books = Book.order("created_at DESC")
+    @books = Book.includes(:user).page(params[:page]).per(4).order("created_at DESC")
   end
   
   def show
+    @user = User.find(params[:user_id])
+    @book = Book.find(params[:id])
   end
 
   def record
@@ -12,7 +14,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    Book.create(
+    @book = Book.create(
       visibility: books_params[:visibility], 
       genre: books_params[:genre], 
       title: books_params[:title], 
@@ -37,19 +39,29 @@ end
   def seach
   end
 
-  
+  def details
+    @user = User.find(params[:user_id])
+    @book = Book.find(params[:id])
+  end
+ 
+  def destroy
+    @user = User.find(params[:user_id])
+    @book = Book.find(params[:id])
+    book.destroy if book.user_id == current_user.id
+        book.destroy
+    end
 
   def edit
+    @user = User.find(params[:user_id])
     @books = Book.find(params[:id])
   end
   
   def update
-    @book = Book.find(params[:id])
-    if @book.update(book_params)
-      
-    else
-      render :edit
-    end
+    @user = User.find(params[:user_id])
+    book = Book.find(params[:id])
+      if book.user_id == current_user.id
+        book.update(book_params)
+      end
   end
 
 def books_params

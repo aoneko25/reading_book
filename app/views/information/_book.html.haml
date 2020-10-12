@@ -1,0 +1,14 @@
+- @books.each do |book|
+  - if user_signed_in? && current_user.id == tweet.user_id
+    .contents-box{data: {book: {id: book.id}}}
+      .content-box
+        .content
+          .content__text
+            %p タイトル
+            %h2= book.title
+          .content__text__information
+            %h2 詳細を見る
+            = link_to '編集', "/books/#{book.id}/edit_books_path", method: :get
+          .content__text__destroy
+            = link_to '削除', "/books/#{book.id}", method: :delete
+        

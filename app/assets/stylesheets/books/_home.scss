@@ -66,11 +66,6 @@
     list-style-type: none!important;
   }
 }
-p {
-  float: right;
-  font-size: 28px;
-  
-}
 
 .books-image {
   float: right;
@@ -88,7 +83,7 @@ p {
   display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #eee;
-  background: #A4C6FF;
+  background: #FFDDFF;
   margin: 60px auto;
   width: 980px;
 }
@@ -165,6 +160,8 @@ p {
   margin-right: 10px;/*はみ出ないように調整*/
   padding: 0.5em 0.5em 0.5em 2em;
   margin-right: 60px;
+  overflow: scroll;
+  box-sizing: border-box;
 }
 
 .content-box {
@@ -184,16 +181,56 @@ p {
 .content {
   &__text {
   line-height: 1.5;
+  display: flex;
+  h2 {
+  margin-left: 20px;
+  background: linear-gradient(transparent 0, #FFDBC9 0);
+    }
+  p {
+    color: #1E90FF;
   }
-  &__time {
-  display: inline-block;
-  color: #888;
   }
-  &__icon
-    i {
-    position: absolute;
-    top: 50%;
-    right: 16px;
+  &__text__informations {
+    line-height: 2;
+    display: flex;
+    .user {
+      span {
+        margin-left: 3px;
+      }
+
+    }
+    .user-name {
+      margin-left: 15px;
+
+    }
+    a {
+      text-decoration: none;
+      color: #005FFF;
+        }
+    h2 {
+      color: #1E90FF;
+      }
+      .data {
+        margin-left: 30px;
+        margin-top: 2px;
+        a {
+
+        }
+      }
+      .edit {
+        margin-left: 30px;
+        margin-top: 2px;
+        a {
+          
+        }
+      }
+      .destroy {
+        margin-left: 30px;
+        margin-top: 2px;
+        a {
+          
+        }
+      }
     }
   }
 
@@ -240,7 +277,7 @@ p {
   height: 250px;
   padding: 40px 0;
   text-align: center;
-  background: #A4C6FF;
+  background: #FFDDFF;
   width: 980px;
   margin: 0 auto;
   margin: 60px auto 0;
