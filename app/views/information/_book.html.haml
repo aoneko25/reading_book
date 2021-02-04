@@ -1,5 +1,5 @@
 - @books.each do |book|
-  - if user_signed_in? && current_user.id == tweet.user_id
+  - if user_signed_in? && current_user.id == book.user_id
     .contents-box{data: {book: {id: book.id}}}
       .content-box
         .content

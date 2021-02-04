@@ -1,33 +1,50 @@
 class ProfilesController < ApplicationController
-  def index
-    @profiles = Profile.new
+  before_action :validates_new, only: :create# プロフィールの登録のバリデーション
+  
+  def show
+    @profile = Profile.find(params[:id])
+  end
+
+  def edit
+    @profile = Profile.find(params[:id])
+  end
+
+  def new
+    @profile = Profile.new
   end
 
   def create
-    Profile.create(
-      self_introduction: profiles_params[:self_introduction], 
-      dream: profiles_params[:dream], 
-      terget: profiles_params[:terget], 
-      scheduled_date: profiles_params[:scheduled_date], 
-      plan: profiles_params[:plan], 
-      favorite_book: profiles_params[:favorite_book], 
-      hobby: profiles_params[:hobby], 
-      forte: profiles_params[:forte], 
-      weak_point: profiles_params[:weak_point], 
+    @profile = Profile.new(
+      terget: profile_params[:terget], 
+      favorite_book: profile_params[:favorite_book], 
+      recommended_book: profile_params[:recommended_book], 
       user_id: current_user.id)
+      @profile.save
   end
 end
 
-def profiles_params
+def validates_new
+  @profile = Profile.new(
+    terget: profile_params[:terget], 
+    favorite_book: profile_params[:favorite_book], 
+    recommended_book: profile_params[:recommended_book], 
+    user_id: current_user.id)
+  render '/profiles/new' unless @profile.valid?
+end
+
+def update
+  @profile = Profile.find(params[:id])
+  if @profile.update(profile_params)
+    redirect_to root_path
+  else
+    render :edit
+  end
+end
+
+def profile_params
   params.require(:profile).permit(
-    :self_introduction,
-    :dream,
     :terget, 
-    :scheduled_date, 
-    :plan,
     :favorite_book,
-    :hobby,
-    :forte,
-    :weak_point,
+    :recommended_book,
     )
   end

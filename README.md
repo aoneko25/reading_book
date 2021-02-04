@@ -61,6 +61,7 @@
 |scheduled_date(予定日)|date|null: true|
 |plan(予定)|string|null: true|
 |favorite_book(好きな本)|string|null: true|
+|recommended_book(オススメの本)|string|null: true|
 |hobby(趣味)|string|null: true|
 |forte(得意なこと)|string|null: true|
 |weak_point(苦手なこと)|string|null: true|

@@ -1,4 +1,4 @@
-= form_for(@books) do |f|
+= form_for(@book) do |f|
   #record-box.record-box
     .bg
       .record-box__inner.clearfix
@@ -11,12 +11,12 @@
             .field-label
               
             .field-input
-              = f.text_field :title, placeholder: 'タイトル'
+              = f.text_field :title, placeholder: 'タイトル(必須)'
           .field
             .field-label
               
             .field-input
-              = f.text_field :subtitle, placeholder: 'サブタイトル'
+              = f.text_field :subtitle, placeholder: 'サブタイトル(なければ空欄)'
           .actions
         
   #record-box2.record-box2
@@ -28,15 +28,15 @@
             .field-label
               %label 
               %span ジャンル
-            = f.text_field :genre, placeholder: 'ジャンル'
+            = f.text_field :genre, placeholder: 'ジャンル(任意)'
             .field-label
               %label 
               %span 著者
-            = f.text_field :author, placeholder: '著者'
+            = f.text_field :author, placeholder: '著者(必須)'
             .field-label
               %label 
               %span 出版社
-            = f.text_field :the_publisher, placeholder: '出版社'
+            = f.text_field :the_publisher, placeholder: '出版社(必須)'
             .field-label
               %label 
               %span 発行年月日
@@ -44,15 +44,15 @@
             .field-label
               %label 
               %span 言語
-            = f.text_field :language, placeholder: '言語'
+            = f.text_field :language, placeholder: '言語(任意)'
             .field-label
               %label 
               %span ページ数
-            = f.text_field :page_number, placeholder: 'ページ数'
+            = f.text_field :page_number, placeholder: 'ページ数(任意)'
             .field-label
               %label 
               %span 注目度
-            = f.text_field :impression, placeholder: '注目度'
+            = f.text_field :visibility, placeholder: '注目度(任意)'
             .field-label
               %label 
               %span 読書日
@@ -64,11 +64,11 @@
             .field-label
               
             .field-input1
-              = f.text_area :overview,class: "statusform",type:"text",placeholder:"概要",value:""
+              = f.text_area :overview,class: "statusform",type:"text",placeholder:"概要(任意)",value:""
             .field-label
               
             .field-input2
-              = f.text_area :impression,class: "statusform",type:"text",placeholder:"感想",value:""
+              = f.text_area :impression,class: "statusform",type:"text",placeholder:"感想(任意)",value:""
           
     .footer
       .action
