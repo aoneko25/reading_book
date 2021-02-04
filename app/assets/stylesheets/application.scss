@@ -3,8 +3,9 @@
 @import "font-awesome";
 
 //トップページ、登録関連
-@import "books/_home.scss";
-@import "books/_record.scss";
+@import "books/_index.scss";
+@import "books/_show.scss";
+@import "books/_new.scss";
 @import "books/_create.scss";
 
 //マイページ登録関連

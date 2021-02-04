@@ -1,0 +1,31 @@
+= form_for(@profile) do |f|
+  .profile-screen
+    .header-profile
+      .profile-box
+        .profile
+          %section.profile-container
+            %h2 プロフィール
+          .profile-text
+            .profile-text__box
+              .profile-text__contents
+                %label 目標
+              - if @profile.terget.present?
+                  = @profile.terget
+                - else
+                  %p 入力なし
+              .profile-text__contents
+                %label 好きな本
+              - if @profile.favorite_book.present?
+                  = @profile.favorite_book
+                - else
+                  %p 入力なし
+              .profile-text__contents
+                %label オススメの本
+              - if @profile.recommended_book.present?
+                  = @profile.recommended_book
+                - else
+                  %p 入力なし
+              
+        .footer-profile-box 
+          .action
+            = f.submit "登録する", class: 'btn'

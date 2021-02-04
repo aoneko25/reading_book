@@ -1,0 +1,378 @@
+.record-box {
+  background-color: #1E90FF;
+  width: 980px;
+  margin: 0 auto;
+  .bg{
+    width:100%;
+    background: radial-gradient(#87cefa 25%, transparent 0),
+                radial-gradient(#87cefa 25%, transparent 0);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px
+  }
+  .record-box__inner {
+    width: 980px;
+    margin: 60px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 60px;
+
+    .record-box__inner--left {
+      float: left;
+      border: double 5px #668ad8;/*二重線 太さ 色*/
+      padding: 0.5em 0.5em 0.5em 2em;
+      line-height: 1.5;
+      padding: 0.5em 0;
+    }
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+    .record-box__inner--right { 
+      float: right;
+      width: 50%;
+    }
+  }
+
+  .record-box__header {
+    background-color: #fff;
+    h2 {
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+      font-size: 40px;
+      font-weight: 200;
+      width: 200px;
+      text-align: center;
+    }
+
+    h5 {
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 200;
+    }
+
+    .btn {
+      margin-top: 20px;
+      color: #fff;
+      background-color: #ccc;
+      font-size: 14px;
+    }
+  }
+
+  .field {
+    margin-bottom: 10px;
+    .field-label {
+      padding: 10px 0;
+      letter-spacing: 1px;
+      font-size: 14px;
+      font-weight: 200;
+
+      i {
+        font-size: 11px;
+      }
+    }
+
+    .field-input {
+      .data {
+        width: 100%;
+        padding: 10px;
+        letter-spacing: 1px;
+        background: #FFF;
+        height: 48px;
+      }
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    height: 50px;
+    padding: 0 30px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+  }
+
+  input[type='submit'] {
+    float: left;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #38aef0;
+  }
+
+  .field-label {
+    .field_with_errors {
+      display: inline-block;
+      color: #d65f4c;
+      font-weight: 400;
+    }
+  }
+  
+
+  .field-input {
+    .field_with_errors {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #d65f4c;
+      }
+    }
+  }
+}
+
+#error_explanation {
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+
+  h2 {
+    margin-bottom: 10px;
+    color: #d65f4c;
+    font-size: 14px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 17px;
+    list-style: square;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+}
+
+
+
+.record-box2 {
+  background-color: #1E90FF;
+  width: 980px;
+  margin: 0 auto;
+  .bg{
+    width:100%;
+    background: radial-gradient(#87cefa 25%, transparent 0),
+                radial-gradient(#87cefa 25%, transparent 0);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px
+  }
+  .record-box2__inner {
+    width: 980px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 60px;
+
+    .record-box2__inner--left{
+      float: left;
+      width: 20%;
+      
+    }
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+
+  .record-box2__inner--right {
+    float: left;
+      width: 80%;
+      
+  }
+
+  .record-box2__header {
+    h2 {
+      float: left;
+      border: double 5px #668ad8;/*二重線 太さ 色*/
+      background: #fff;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+      font-size: 40px;
+      font-weight: 200;
+      width: 200px;
+      text-align: center;
+      &:after {
+        content: '';
+        display: block;
+        width: 60px;
+        margin-top: 5px;
+      }
+    }
+
+    h5 {
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 200;
+    }
+
+    .btn {
+      margin-top: 20px;
+      color: #fff;
+      background-color: #ccc;
+      font-size: 14px;
+    }
+  }
+
+  .field {
+    margin-bottom: 10px;
+
+    .field-label {
+      letter-spacing: 1px;
+      font-size: 14px;
+      font-weight: 200;
+      margin: 8px 0 0;
+      
+      i {
+        font-size: 11px;
+      }
+      .data {
+        width: 100%;
+        margin: 8px 0 0;
+        height: 48px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+    }
+
+    .field-input1 {
+      .data {
+        width: 600px;
+        height: 310px;
+        margin-top: 100px;
+        margin-left: 50px;
+        float: right;
+        bottom: 30px;
+        background-color: #fff;
+      }
+      }
+    }
+  }
+  .field-input2 {
+    .data {
+      width: 600px;
+      height: 310px;
+      margin-top: 20px;
+      margin-left: 50px;
+      float: right;
+      background-color: #fff;
+      }
+
+  .btn {
+    display: inline-block;
+    height: 50px;
+    padding: 0 30px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+  }
+
+  input[type='submit'] {
+    float: left;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #38aef0;
+  }
+
+  .field-label {
+    .field_with_errors {
+      display: inline-block;
+      color: #d65f4c;
+      font-weight: 400;
+    }
+    
+  }
+
+  .field-input {
+    .field_with_errors {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #d65f4c;
+      }
+    }
+  }
+}
+
+#error_explanation {
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+
+  h2 {
+    margin-bottom: 10px;
+    color: #d65f4c;
+    font-size: 14px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 17px;
+    list-style: square;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+}
+
+span {
+  background: #0033FF;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  
+}
+
+.footer  {
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: 250px;
+  padding: 40px 0;
+  text-align: center;
+  background: #FFF;
+}
+
+.action {
+  max-width: 320px;
+  margin: 0 auto;
+  margin-top: 50px;
+  
+}
+input.btn {
+  background: #FF3333;
+  width: 100%;
+  font-size: 18px;
+  display: block;
+  border: 1px solid #FF3333;
+  color: #fff;
+}

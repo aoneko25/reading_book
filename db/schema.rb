@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_08_12_032404) do
     t.date "scheduled_date"
     t.string "plan"
     t.string "favorite_book"
+    t.string "recommended_book"
     t.string "hobby"
     t.string "forte"
     t.string "weak_point"

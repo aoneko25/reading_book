@@ -1,0 +1,22 @@
+= form_for(@profile) do |f|
+  .profile-screen
+    .header-profile
+      .profile-box
+        .profile
+          %section.profile-container
+            %h2 プロフィール
+          .profile-text
+            .profile-text__box
+              .profile-text__contents
+                %label 目標
+              = f.text_area :terget, class: 'profile'
+              .profile-text__contents
+                %label 好きな本
+              = f.text_area :favorite_book, class: 'profile'
+              .profile-text__contents
+                %label オススメの本
+              = f.text_area :recommended_book, class: 'profile'
+              
+        .footer-profile-box 
+          .action
+            = f.submit "登録する", class: 'btn'

@@ -1,0 +1,125 @@
+= form_for(@book) do |f|
+  #record-box.record-box
+    .bg
+      .record-box__inner.clearfix
+        .record-box__inner--left.record-box__header
+          %h2 タイトル
+          
+        .record-box__inner--right.user-form
+          
+          .field
+            .field-label
+              
+            .field-input
+              .data
+                - if @book.title.present?
+                  = @book.title
+                - else
+                  %p 入力なし
+                
+          .field
+            .field-label
+              
+            .field-input
+              .data
+                - if @book.subtitle.present?
+                  = @book.subtitle
+                - else
+                  %p 入力なし
+          .actions
+        
+  #record-box2.record-box2
+    .bg
+      .record-box2__inner.clearfix
+        .record-box2__inner--left.record-box2__header
+          .field
+            %h2 詳細
+            .field-label
+              %label 
+              %span ジャンル
+              .data
+                - if @book.genre.present?
+                  = @book.genre
+                - else
+                  %p 入力なし
+            .field-label
+              %label 
+              %span 著者
+              .data
+                - if @book.author.present?
+                  = @book.author
+                - else
+                  %p 入力なし
+            .field-label
+              %label 
+              %span 出版社
+              .data
+                - if @book.the_publisher.present?
+                  = @book.the_publisher
+                - else
+                  %p 入力なし
+            .field-label
+              %label 
+              %span 発行年月日
+              .data
+                - if @book.issue_date.present?
+                  = @book.issue_date
+                - else
+                  %p 入力なし
+            .field-label
+              %label 
+              %span 言語
+              .data
+                - if @book.language.present?
+                  = @book.language
+                - else
+                  %p 入力なし
+            .field-label
+              %label 
+              %span ページ数
+              .data
+                - if @book.page_number.present?
+                  = @book.page_number
+                - else
+                  %p 入力なし
+            .field-label
+              %label 
+              %span 注目度
+              .data
+                - if @book.visibility.present?
+                  = @book.visibility
+                - else
+                  %p 入力なし
+            .field-label
+              %label 
+              %span 読書日
+              .data
+                - if @book.read_day.present?
+                  = @book.read_day
+                - else
+                  %p 入力なし
+          
+        .record-box2__inner--right.user-form
+          .field
+          
+            .field-label
+              
+            .field-input1
+              .data
+                - if @book.overview.present?
+                  = @book.overview
+                - else
+                  %p 入力なし
+            .field-label
+              
+            .field-input2
+              .data
+                - if @book.impression.present?
+                  = @book.impression
+                - else
+                  %p 入力なし
+          
+    .footer
+      .action
+        = link_to "戻る", root_path, class: 'btn complete'
+            

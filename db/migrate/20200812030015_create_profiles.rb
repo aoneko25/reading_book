@@ -8,6 +8,7 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.date      :scheduled_date
       t.string      :plan
       t.string      :favorite_book
+      t.string      :recommended_book
       t.string      :hobby
       t.string      :forte
       t.string      :weak_point

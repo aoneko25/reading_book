@@ -1,70 +1,78 @@
 class BooksController < ApplicationController
+  before_action :validates_new, only: :create# 本の登録のバリデーション
 
-  def home
+  def index
     @books = Book.includes(:user).page(params[:page]).per(4).order("created_at DESC")
   end
-  
-  def show
-    @user = User.find(params[:user_id])
-    @book = Book.find(params[:id])
-  end
-
-  def record
-    @books = Book.new
-  end
-
-  def create
-    @book = Book.create(
-      visibility: books_params[:visibility], 
-      genre: books_params[:genre], 
-      title: books_params[:title], 
-      subtitle: books_params[:subtitle], 
-      language: books_params[:language], 
-      author: books_params[:author], 
-      the_publisher: books_params[:the_publisher], 
-      issue_date: books_params[:issue_date], 
-      page_number: books_params[:page_number], 
-      format: books_params[:format], 
-      overview: books_params[:overview], 
-      chapter: books_params[:chapter],
-      volume: books_params[:volume],
-      episode: books_params[:episode],
-      read_day: books_params[:read_day],
-      impression: books_params[:impression],
-      user_id: current_user.id)
-      
-  end
-end
 
   def seach
   end
 
-  def details
-    @user = User.find(params[:user_id])
+  def show
     @book = Book.find(params[:id])
-  end
- 
-  def destroy
-    @user = User.find(params[:user_id])
-    @book = Book.find(params[:id])
-    book.destroy if book.user_id == current_user.id
-        book.destroy
-    end
-
-  def edit
-    @user = User.find(params[:user_id])
-    @books = Book.find(params[:id])
   end
   
-  def update
-    @user = User.find(params[:user_id])
-    book = Book.find(params[:id])
-      if book.user_id == current_user.id
-        book.update(book_params)
-      end
+
+  def new
+    @book = Book.new
   end
 
-def books_params
+  def edit
+    @book = Book.find(params[:id])
+  end
+
+  def create
+    @book = Book.new(
+      title: book_params[:title], 
+      subtitle: book_params[:subtitle], 
+      genre: book_params[:genre], 
+      author: book_params[:author], 
+      the_publisher: book_params[:the_publisher], 
+      issue_date: book_params[:issue_date], 
+      language: book_params[:language], 
+      page_number: book_params[:page_number], 
+      visibility: book_params[:visibility], 
+      read_day: book_params[:read_day],
+      overview: book_params[:overview], 
+      impression: book_params[:impression],
+      user_id: current_user.id)
+      @book.save
+  end
+end
+
+  def validates_new
+    @book = Book.new(
+      title: book_params[:title], 
+      author: book_params[:author], 
+      the_publisher: book_params[:the_publisher], 
+      user_id: current_user.id)
+    render '/books/new' unless @book.valid?
+  end
+
+  def update
+    if @book.update(book_params)
+      
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+  end
+
+  def destroyed
+    @book = Book.find(prams[:id])
+    if @book.destroy
+      render :edit
+    else
+      redirect_to destroy(@book)
+    end
+  end
+ 
+
+def book_params
   params.require(:book).permit(
     :visibility,
     :genre,
@@ -75,11 +83,7 @@ def books_params
     :the_publisher,
     :issue_date,
     :page_number,
-    :format,
     :overview,
-    :chapter,
-    :volume,
-    :episode ,
     :read_day,
     :impression,
     )
