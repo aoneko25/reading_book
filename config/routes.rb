@@ -9,8 +9,6 @@ Rails.application.routes.draw do
       get 'books/new' #本の登録
       post 'books/create' #登録完了
       get 'seach'  #本の検索
-      delete 'books/:id', to: 'books#destroy'
-      
     end
   end
 
@@ -28,7 +26,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :books, only: [:index, :seach, :show, :new, :create]
   resources :users, only: [:index, :edit, :update]
   resources :information, only: [:show]
   resources :profiles, only: [:new, :create, :show, :edit, :update]
