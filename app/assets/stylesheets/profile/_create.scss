@@ -1,13 +1,17 @@
 .complete-screen {
-  background: #E6FFE9;
+  background-color: #1E90FF;
 }
 
 .complete-header {
   height: 128px;
-  text-align: center;
-  background: #E6FFE9;
+  background-color: #1E90FF;
+  background: radial-gradient(#87cefa 25%, transparent 0),
+                  radial-gradient(#87cefa 25%, transparent 0);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px
 }
 .complete-header-box {
+  margin: 0 auto;
   &__icon {
     img {
       margin: 40px 0 0;
@@ -18,15 +22,24 @@
   }
 }
 
+.complete {
+  background-color: #1E90FF;
+  background: radial-gradient(#87cefa 25%, transparent 0),
+                  radial-gradient(#87cefa 25%, transparent 0);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px
+}
 .complete-box {
   background: #fff;
-  width: 700px;
+  width: 600px;
   margin: 0 auto;
+  height: 1000px;
 }
 
 .complete-main {
   &__header {
-    background: #fff;
+    color: #fff;
+    background: #A4C6FF;
   }
   h2 {
     font-size: 22px;
@@ -36,7 +49,7 @@
     font-weight: bold;
   }
   &__box {
-    padding: 24px 16px 40px;
+    padding: 60px 16px 80px;
     border-top: 1px solid #f5f5f5;
   }
   &__form {
@@ -59,7 +72,7 @@
 a.btn.complete {
   margin: 5px 0 0 0;
   color: #fff;
-  background-color: #0033FF;
+  background: #ea352d;
   display: block;
   width: 100%;
   line-height: 48px;
@@ -76,5 +89,10 @@ a.btn.complete {
   height: 500px;
   padding: 40px 0;
   text-align: center;
-  background: #E6FFE9;
+  background-color: #1E90FF;
+  width:100%;
+    background: radial-gradient(#87cefa 25%, transparent 0),
+                radial-gradient(#87cefa 25%, transparent 0);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px
 }

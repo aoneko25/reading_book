@@ -8,12 +8,12 @@
 }
 .header-profile {
   height: 100px;
-  background: #FFEEFF;
+  background: #BAD3FF;
   text-align: center;
   display: block;
   box-sizing: border-box;
   font-size: 12px;
-  color: #888;
+  color: #FFFFFF;
   font-weight: 600;
   h1 {
     margin: 40px 0 0;
@@ -34,20 +34,17 @@
   }
 }
 .profile-text {
-  
-  &__box {
-    max-width: 343px;
-    margin: 0 auto;
-    margin: 24px auto 0;
-    padding: 0 0 40px;
-    background: #C299FF;
+  width: 500px;
+  margin: 0 auto;
+  .bg{
+    width:100%;
+    background: radial-gradient(#87cefa 25%, transparent 0),
+                radial-gradient(#87cefa 25%, transparent 0);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px
   }
-  &__contents {
-    
-  p {
-    margin: 8px 0 0;
-    line-height: 1.5;
-    color: #888;
+  &__image {
+    text-align: center;
   }
   label {
     color: #fff;
@@ -56,6 +53,32 @@
     margin: 20px 0 0;
     font-size: 15px;
   }
+  &__box {
+    width: 400px;
+    margin: 0 auto;
+    margin: 25px auto 25px;
+    padding: 0 0 40px;
+    background: #1E90FF;
+  }
+  &__image {
+    label {
+      color: #fff;
+      font-weight: 600;
+      display: inline-block;
+      margin: 20px 0 0;
+      font-size: 15px;
+    }
+    label.image {
+      display: none;
+    }
+  }
+  &__contents {
+  p {
+    margin: 8px 0 0;
+    line-height: 1.5;
+    color: #888;
+  }
+  
   span {
     background: #0033FF;
     padding: 2px 4px;
@@ -97,14 +120,13 @@ input {
 
 
 .footer-profile-box  {
-  margin: 40px 0 0 0;
   right: 0;
   left: 0;
   z-index: 1;
   height: 250px;
   padding: 40px 0;
   text-align: center;
-  background: #FFEEFF;
+  background: #BAD3FF;
 }
 registration {
   width: 100%;

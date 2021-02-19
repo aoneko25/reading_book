@@ -36,19 +36,23 @@ class BooksController < ApplicationController
   end
 end
 
-  def destroy
+  def update
     @book = Book.find(params[:id])
-    @book.destroy
+    if @book.update(book_params)
+      
+    else
+      render :edit
+    end
   end
 
-  def validates_new
-    @book = Book.new(
-      title: book_params[:title], 
-      author: book_params[:author], 
-      the_publisher: book_params[:the_publisher], 
-      user_id: current_user.id)
-    render '/books/new' unless @book.valid?
-  end
+def validates_new
+  @book = Book.new(
+    title: book_params[:title], 
+    author: book_params[:author], 
+    the_publisher: book_params[:the_publisher], 
+    user_id: current_user.id)
+  render '/books/new' unless @book.valid?
+end
 
   def book_params
     params.require(:book).permit(

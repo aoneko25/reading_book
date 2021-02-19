@@ -19,9 +19,6 @@
           %li.left-box__lists__list
             - if user_signed_in?
               = link_to "プロフィール登録", new_profile_path
-          %li.left-box__lists__list
-            - if user_signed_in?
-              = link_to "プロフィール編集", edit_profile_path
           
       .data-box2__inner--right.user-form
         = render @books

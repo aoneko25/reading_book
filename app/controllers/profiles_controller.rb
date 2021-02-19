@@ -5,10 +5,6 @@ class ProfilesController < ApplicationController
     @profile = Profile.find(params[:id])
   end
 
-  def edit
-    @profile = Profile.find(params[:id])
-  end
-
   def new
     @profile = Profile.new
   end
@@ -30,6 +26,10 @@ def validates_new
     recommended_book: profile_params[:recommended_book], 
     user_id: current_user.id)
   render '/profiles/new' unless @profile.valid?
+end
+
+def edit
+  @profile = Profile.find(params[:id])
 end
 
 def update

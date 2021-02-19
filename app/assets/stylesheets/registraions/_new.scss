@@ -82,27 +82,21 @@ input {
   font-size: 16px;
 }
 
+.footer-registration  {
+  background-color: #1E90FF;
+}
 
 .footer-registration-box  {
-  margin: 40px 0 0 0;
-  right: 0;
-  left: 0;
+  margin: 60px 0 0 0;
   z-index: 1;
-  height: 250px;
-  padding: 40px 0;
-  text-align: center;
-  background: #FFEEFF;
+  height: 200px;
+  width:100%;
+  background: radial-gradient(#87cefa 25%, transparent 0),
+              radial-gradient(#87cefa 25%, transparent 0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px
 }
-registration {
-  width: 100%;
-  margin: 8px 0 0;
-  height: 48px;
-  padding: 10px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  line-height: 1.5;
-  font-size: 16px;
-}
+
+
 
 
