@@ -1,36 +1,38 @@
 .seach-screen
-  .seach-header
-    .seach-header-box
-    %h1.seach-header-box__icon
-      
-  .seach-box
-    .seach-main
-      %section.seach-main__header
-        %h2 本の検索サイト
-      .seach-main__box
-        .seach-main__form
-          = link_to "http://book.tsuhankensaku.com/hon/", class: "contents__btn" do
-            %button.Oudan{type:"submit"} 書籍横断検索システム
-          = link_to "http://book.tsuhankensaku.com/", class: "contents__btn" do
-            %button.Kensaku{type:"submit"} 本・書籍通販検索
-          = link_to "https://www.books.or.jp/", class: "contents__btn" do
-            %button.Books{type:"submit"} Books 出版書誌データベース
-          = link_to "https://honto.jp/", class: "contents__btn" do
-            %button.honto{type:"submit"} honto
-          = link_to "https://www.kinokuniya.co.jp/", class: "contents__btn" do
-            %button.Kinokuniya{type:"submit"} 紀伊国屋書店
-          = link_to "https://www.kinokuniya.co.jp/", class: "contents__btn" do
-            %button.TSUTAYA{type:"submit"} TSUTAYAオンライン
-          = link_to "https://books.rakuten.co.jp/book/", class: "contents__btn" do
-            %button.Rakuten{type:"submit"} 楽天ブックス
-          = link_to "https://www.amazon.co.jp/", class: "contents__btn" do
-            %button.amazon{type:"submit"} amazon  
+  .bg
+    .seach-header
+      .seach-header-box
+      %h1.seach-header-box__icon
+
+  .bg    
+    .seach-box
+      .seach-main
+        %section.seach-main__header
+          %h2 本の検索サイト
+        .seach-main__box
+          .seach-main__form
+            = link_to "http://book.tsuhankensaku.com/hon/", class: "contents__btn" do
+              %button.Oudan{type:"submit"} 書籍横断検索システム
+            = link_to "http://book.tsuhankensaku.com/", class: "contents__btn" do
+              %button.Kensaku{type:"submit"} 本・書籍通販検索
+            = link_to "https://www.books.or.jp/", class: "contents__btn" do
+              %button.Books{type:"submit"} Books 出版書誌データベース
+            = link_to "https://honto.jp/", class: "contents__btn" do
+              %button.honto{type:"submit"} honto
+            = link_to "https://www.kinokuniya.co.jp/", class: "contents__btn" do
+              %button.Kinokuniya{type:"submit"} 紀伊国屋書店
+            = link_to "https://www.kinokuniya.co.jp/", class: "contents__btn" do
+              %button.TSUTAYA{type:"submit"} TSUTAYAオンライン
+            = link_to "https://books.rakuten.co.jp/book/", class: "contents__btn" do
+              %button.Rakuten{type:"submit"} 楽天ブックス
+            = link_to "https://www.amazon.co.jp/", class: "contents__btn" do
+              %button.amazon{type:"submit"} amazon  
         
-          
-  .footer-seach-box 
-    %ul.footer-seach-box-content
-      %li.footer-seach-box-content__list
-        = link_to "戻る", root_path, class: 'btn seach'
-      
-      
-  
+  .bg        
+    .footer-seach-box 
+      %ul.footer-seach-box-content
+        %li.footer-seach-box-content__list
+          = link_to "戻る", root_path, class: 'btn seach'
+        
+        
+    

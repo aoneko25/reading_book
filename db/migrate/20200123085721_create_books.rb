@@ -9,15 +9,15 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.string      :subtitle
       t.string      :language        
       t.string      :author          
-      t.string      :the_publisher   
-      t.date      :issue_date      
-      t.integer     :page_number     
-      t.string      :format          
-      t.text        :overview        
+      t.string      :the_publisher
+      t.string      :format 
       t.string     :chapter         
       t.string     :volume          
-      t.string     :episode         
-      t.date        :read_day        
+      t.string     :episode   
+      t.integer     :page_number  
+      t.date      :issue_date      
+      t.date        :read_day              
+      t.text        :overview            
       t.text        :impression      
 
       t.timestamps null: true

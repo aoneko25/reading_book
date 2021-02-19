@@ -5,7 +5,6 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.string      :self_introduction
       t.string      :dream
       t.string      :terget
-      t.date      :scheduled_date
       t.string      :plan
       t.string      :favorite_book
       t.string      :recommended_book
@@ -13,6 +12,7 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.string      :forte
       t.string      :weak_point
       t.string      :icon
+      t.date      :scheduled_date
 
       t.timestamps
     end

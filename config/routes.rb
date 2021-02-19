@@ -26,7 +26,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users, only: [:index, :edit, :update]
+  resources :users, only: [:new, :create,:index, :edit, :update]
+  resources :books, only: [:edit, :update]
   resources :information, only: [:show]
   resources :profiles, only: [:new, :create, :show, :edit, :update]
   end
