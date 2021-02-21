@@ -11,13 +11,7 @@
           = book.user.nickname
         .data
           %td= link_to '詳細',book_path(book)
-        .edit
-          - if user_signed_in? && current_user.id == book.user_id
-            %td= link_to '編集',edit_book_path(book)
-        .destroy
-          - if user_signed_in? && current_user.id == book.user_id
-            
-            = link_to '削除', "/books/#{book.id}/book_path", method: :delete
+        
           
           
         
