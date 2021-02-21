@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :nickname,:age,:email,:password, presence: true
+  
   has_many :books
-  belongs_to :profile
 end

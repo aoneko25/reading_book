@@ -24,10 +24,7 @@
               %label パスワード(6文字)
               %span 必須
               = f.password_field :password, autocomplete: "new-password"
-            .registration-text__contents
-              %label パスワード確認
-              %span 必須
-            = f.password_field :password_confirmation, autocomplete: "new-password"
+            
             = f.submit "送信", class: 'registration'
       .footer-registration      
         .footer-registration-box 
