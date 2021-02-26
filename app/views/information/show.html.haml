@@ -17,9 +17,6 @@
           %li.left-box__lists__list
             = link_to "登録内容変更", edit_user_registration_path
           %li.left-box__lists__list
-            - if user_signed_in?
-              = link_to "プロフィール登録", new_profile_path
-          %li.left-box__lists__list
             = link_to "ホームに戻る", root_path, class: 'btn seach'
           
       .data-box2__inner--right.user-form
