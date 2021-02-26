@@ -13,10 +13,6 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
-  def edit
-    @book = Book.find(params[:id])
-  end
-
   def create
     @book = Book.new(
       title: book_params[:title], 
@@ -36,24 +32,37 @@ class BooksController < ApplicationController
   end
 end
 
+  def check
+    book = Book.find(params[:id])
+  end
+
+  def destroy
+    if @book.destroy
+      redirect_to root_path, notice: '削除しました'
+    else
+      render :check
+    end
+  end
+
+  def edit
+    @book = Book.find(params[:id])
+  end
+
   def update
     @book = Book.find(params[:id])
-    if @book.update(book_params)
-      
+      @book.update(book_params)
     else
       render :edit
-    end
   end
 
 def validates_new
   @book = Book.new(
     title: book_params[:title], 
-    author: book_params[:author], 
-    the_publisher: book_params[:the_publisher], 
     user_id: current_user.id)
   render '/books/new' unless @book.valid?
 end
-
+  
+  private
   def book_params
     params.require(:book).permit(
       :visibility,
@@ -69,5 +78,6 @@ end
       :read_day,
       :impression,
       )
+      .merge(book_id: params[:book_id])
   end
 
