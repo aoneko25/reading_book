@@ -12,8 +12,8 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(
       terget: profile_params[:terget], 
+      hobby: profile_params[:hobby], 
       favorite_book: profile_params[:favorite_book], 
-      recommended_book: profile_params[:recommended_book], 
       user_id: current_user.id)
       @profile.save
   end
@@ -22,8 +22,8 @@ end
 def validates_new
   @profile = Profile.new(
     terget: profile_params[:terget], 
+    hobby: profile_params[:hobby], 
     favorite_book: profile_params[:favorite_book], 
-    recommended_book: profile_params[:recommended_book], 
     user_id: current_user.id)
   render '/profiles/new' unless @profile.valid?
 end
@@ -41,10 +41,11 @@ def update
   end
 end
 
-def profile_params
-  params.require(:profile).permit(
-    :terget, 
-    :favorite_book,
-    :recommended_book,
-    )
-  end
+  private
+  def profile_params
+    params.require(:profile).permit(
+      :terget, 
+      :hobby,
+      :favorite_book,
+      )
+    end
