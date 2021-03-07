@@ -1,4 +1,4 @@
-= form_for(@profile) do |f|
+= form_for @profile do |f|
   .profile-screen
     .header-profile
       .profile-box
@@ -12,11 +12,11 @@
                   %label 目標
                 = f.text_area :terget, class: 'profile'
                 .profile-text__contents
+                  %label 趣味
+                = f.text_area :hobby, class: 'profile'
+                .profile-text__contents
                   %label 好きな本
                 = f.text_area :favorite_book, class: 'profile'
-                .profile-text__contents
-                  %label オススメの本
-                = f.text_area :recommended_book, class: 'profile'
               
         .footer-profile-box 
           .action

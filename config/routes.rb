@@ -10,7 +10,6 @@ Rails.application.routes.draw do
       post 'books/create' #登録完了
       get 'books/edit' #本の編集
       post 'books/update' #本の編集完了
-      get 'books/check' #削除前の確認画面
       delete 'books/:id', to: 'books#destroy'
       get 'seach'  #本の検索
     end
@@ -21,10 +20,20 @@ Rails.application.routes.draw do
       get 'users/:id', to: 'information#index' #マイページ
     end
   end
+  
+  resources :profiles do
+    collection do
+      get 'profiles/new' #プロフィールの登録
+      post 'profiles/create' #登録完了
+      get 'profiles/show' #プロフィールの確認
+      get 'profiles/edit' #プロフィールの確認
+    end
+  end
 
   resources :users, only: [:index,:new, :create, :edit, :update, :destroy]
-  resources :books, only: [:new, :create, :show, :chcek, :delete, :edit, :update]
+  resources :books, only: [:new, :create, :show, :delete, :edit, :update]
   resources :information, only: [:show]
+  resources :profiles, only: [:new, :create, :show, :edit, :update]
   end
 
 
