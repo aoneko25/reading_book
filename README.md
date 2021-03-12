@@ -26,6 +26,9 @@
 - [ ] ページネーション機能
 - [ ] 本の検索サイトへのリンク
 
+# データベース設計
+https://docs.google.com/document/d/13hudxsdf7nURaWKa4dGSL11XlkaiEhPN_79nBJwhIUw/edit#heading=h.dezakegwwh22
+
 # 使用gem一覧
 ## 新規登録、ログイン機能
 * device
