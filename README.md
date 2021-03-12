@@ -2,14 +2,16 @@
 
 # Read a book(リード　ア　ブック)
 # https://whispering-anchorage-37648.herokuapp.com/ (heroku)
+現在本番環境上でHTTP ERROR400のエラーが出ており本の登録とプロフィールの登録が出来ません。
+
+新規登録、ログイン、本の検索機能は利用できます。
 
 ![画像名](screencapture-localhost-3000-2021-03-07-00_28_31.png)
 ![画像名](screencapture-localhost-3000-books-new-2021-03-07-00_41_53.png)
 
 # 概要
-*
-*
-*
+* オススメの本を投稿してユーザー同士共有し、交流するアプリ。
+* 本について楽しく語り合うことで、読書が苦手な人も好きになる、楽しくなることを目指します。
 # バージョン情報
 * Ruby 2.5.1
 * Rails 5.2.4.1
@@ -44,6 +46,8 @@
 * rspec-rails
 * web-console
 * factory_bot
-# セットアップ
-*
-*
+## デプロイ
+* sqlite3
+* pg
+# デプロイ環境
+* heroku-18
