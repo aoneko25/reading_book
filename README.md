@@ -2,7 +2,9 @@
 
 # Read a book(リード　ア　ブック)
 # https://whispering-anchorage-37648.herokuapp.com/ (heroku)
-現在本番環境上でHTTP ERROR400のエラーが出ており本の登録とプロフィールの登録が出来ません。
+herokuでデプロイしていますが、現在本番環境上でHTTP ERROR400のエラーが出ており本の登録とプロフィールの登録が出来ません。
+
+解決する為色々試していますが、現在AWSでデプロイし直しを検討中です。
 
 新規登録、ログイン、本の検索機能は利用できます。
 
@@ -31,6 +33,17 @@
 - [ ] プロフィール登録機能
 - [ ] ページネーション機能
 - [ ] 本の検索サイトへのリンク
+
+## 実装中の機能一覧
+
+- [ ] 本のデータ編集機能
+- [ ] 本のデータ削除機能
+
+## 登録予定の機能一覧
+
+- [ ] コメント機能
+- [ ] いいね機能
+- [ ] 本のデータ検索機能
 
 # データベース設計
 https://docs.google.com/document/d/13hudxsdf7nURaWKa4dGSL11XlkaiEhPN_79nBJwhIUw/edit#heading=h.dezakegwwh22
