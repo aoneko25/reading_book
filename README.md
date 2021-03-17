@@ -6,6 +6,12 @@
 
 新規登録、ログイン、本の検索機能は利用できます。
 
+仮ニックネーム nekoneko
+
+仮メールアドレス test@gmail.com
+
+仮パスワード　koneko25
+
 ![画像名](screencapture-localhost-3000-2021-03-07-00_28_31.png)
 ![画像名](screencapture-localhost-3000-books-new-2021-03-07-00_41_53.png)
 
