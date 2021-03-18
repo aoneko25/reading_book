@@ -46,6 +46,7 @@ herokuでデプロイしていますが、現在本番環境上でHTTP ERROR400�
 - [ ] コメント機能
 - [ ] いいね機能
 - [ ] 本のデータ検索機能
+- [ ] 画像登録機能
 
 # データベース設計
 https://docs.google.com/document/d/13hudxsdf7nURaWKa4dGSL11XlkaiEhPN_79nBJwhIUw/edit#heading=h.dezakegwwh22
