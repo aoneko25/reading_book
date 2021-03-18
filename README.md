@@ -53,6 +53,8 @@ https://docs.google.com/document/d/13hudxsdf7nURaWKa4dGSL11XlkaiEhPN_79nBJwhIUw/
 
 # ER図
 
+![画像名](Entity Relationship Diagram.png)
+
 # 使用gem一覧
 ## 新規登録、ログイン機能
 * device
