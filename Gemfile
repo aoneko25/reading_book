@@ -42,6 +42,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -61,6 +62,7 @@ group :test do
   gem 'chromedriver-helper'
   gem 'pry-rails'
   gem 'jquery-rails'
+  gem 'faker', "~> 2.8"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
